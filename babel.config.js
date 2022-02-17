@@ -5,6 +5,7 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
+    ['relay'],
     [
       '@babel/plugin-transform-runtime',
       {
