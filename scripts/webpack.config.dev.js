@@ -15,6 +15,13 @@ module.exports = merge(base, {
       'Access-Control-Allow-Origin': '*',
     },
     historyApiFallback: true,
+    proxy: {
+      '/graphql': {
+        target: 'https://infra-search-shop4data.collibra.com',
+        secure: false,
+        changeOrigin: true,
+      },
+    },
   },
   module: {
     rules: [
